@@ -1,27 +1,27 @@
-%Dokumenteinstellungen und Anpassungen
+%document settings and adjustments
 \input{resources/settings/settings}
 \input{resources/styles/adjustments}
 
-%Titelformen - gewünschtes Layout einkommentieren
+%title forms - comment on the desired layout
 
-%%Graduation
+%%graduation
 \include{titles/graduation}
 \gradeType{Master of Science (M.Sc.)}
 \secondExaminer{John Doe}
 
-%Research paper
+%research paper
 %\include{titles/research_papger}
 %\subTitle{Ein optionaler Untertitel der Arbeit}
 %\researchPart{A}
 
-%Angaben zur Arbeit und dem Author (von beiden Layouts genutzt)
+%information about the work and the author (used by both layouts)
 \title{This is the title of the thesis which can extend over several lines}
 \author{John Doe}
 \matrikelnr{s0000000}
 \submitDate{February 13, 2022}
 \firstExaminer{John Doe}
 
-%Verzeichnisse generieren
+%generate glossaries
 \makeglossaries
 \loadglsentries{references/glossary_acronyms.tex}
 \setacronymstyle{long-short}
@@ -29,13 +29,13 @@
 \makeindex[columns=2, title=Stichwortverzeichnis, options= -s resources/styles/indexstyle.ist, intoc]
 \indexsetup{level=\chapter*,toclevel=chapter}
 
-%Start des Inhalts
+%start of the content
 \begin{document}
 
-%Notwendiger Workaround
+%necessary workaround
 \pagenumbering{alph}
 
-%Deckblatt erzeugen
+%create cover page
 \maketitle
 
 \pagenumbering{Roman}
@@ -43,39 +43,45 @@
 \include{chapter/Vorwort} \clearpage
 \include{chapter/Abstract} \clearpage
 
-%Inhaltsverzeichnis
+%table of contents
 \tableofcontents \newpage
 
-%Hauptteil
+%main part
 \pagenumbering{arabic}
 \input{chapter/Einleitung} \clearpage
 \input{chapter/Beispiele} \clearpage
 
-%Anhang
+%appendix
+%TODO:なにこれ？
 \pagenumbering{Alph}
 
-%Abbildungsverzeichnis
+%list of figures
 \listoffigures \clearpage
-%Tabellenverzeichnis
+
+%list of tables
 \listoftables \clearpage
-%Quelltextverzeichnis
+
+%source code index
 \lstlistoflistings \clearpage
-%Stichwortverzeichnis
+
+%keyword index
 \printindex \clearpage
-%Glossar
+
+%Glossary
 \printglossary[title={Glossar}] \clearpage
-%Abkürzungsverzeichnis
-\printglossary[style=dottedlocations,type=\acronymtype,title={Abkürzungsverzeichnis}] \clearpage
 
-%Literaturverzeichnisse (getrennt nach Stichwort)
-\printbibliography[heading=bibintoc, keyword={book}, title={Literaturverzeichnis}]\clearpage
-\printbibliography[heading=bibintoc, keyword={online}, title={Onlinequellen}]\clearpage
-\printbibliography[heading=bibintoc, keyword={image}, title={Bildquellen}]\clearpage
+%list of abbreviations
+\printglossary[style=dottedlocations,type=\acronymtype,title={List of Abbreviations}] \clearpage
 
-% Anhang
+%bibliographies (separated by keyword)
+\printbibliography[heading=bibintoc, keyword={book}, title={Bibliography}]\clearpage
+\printbibliography[heading=bibintoc, keyword={online}, title={Online source}]\clearpage
+\printbibliography[heading=bibintoc, keyword={image}, title={Picture source}]\clearpage
+
+% appendix
 \input{chapter/Anhang}
 
-% Eigenständigkeitserklärung
+% declaration
 \input{chapter/Eigenstaendigkeitserklaerung}
 
 \end{document}

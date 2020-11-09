@@ -1,9 +1,11 @@
 \chapter{Beispiele} \label{c:beispiele}
 
-Im Kapitel Beispiele (siehe \autoref{c:beispiele}) werden die möglichen Funktionen und\index{und} Möglichkeiten dies LaTeX-Dokuments demonstriert.
+The chapter Examples (see \autoref{c:beispiele}) demonstrates the possible functions and\index{and} possibilities of this LaTeX document.
+%Im Kapitel Beispiele (siehe \autoref{c:beispiele}) werden die möglichen Funktionen und\index{und} Möglichkeiten dies LaTeX-Dokuments demonstriert.
 
-\section{Source Code}
+\section{Source code}
 
+%TODO:なんというのだ？「次の」か？
 Nachfolgend der \autoref{lst:helloworld}.
 
 \begin{lstlisting}[caption={Hello World}, captionpos=b, label={lst:helloworld}]
@@ -18,77 +20,88 @@ class HelloWorldApp {
 }
 \end{lstlisting}
 
+
+
 \section{Picture}
 
 \begin{wrapfigure}{R}{0.5\textwidth}
 	\centering
 	\includegraphics[width=0.5\textwidth]{resources/images/example}
-	\caption{Beispielbild {\cite{PEXELS2015}}}
+	\caption{sample picture {\cite{PEXELS2015}}}
 \end{wrapfigure}
 
-Die rechts zu sehende Grafik demonstriert die Möglichkeiten des Paketes \glqq wrapfig\grqq . Grafiken innerhalb einer \glqq wrapfigure\grqq{} können entweder links oder rechts von Text umlaufen werden.
+%Die rechts zu sehende Grafik demonstriert die Möglichkeiten des Paketes \glqq wrapfig\grqq . Grafiken innerhalb einer \glqq wrapfigure\grqq{} können entweder links oder rechts von Text umlaufen werden.
+The graphic on the right demonstrates the possibilities of the package \glqq wrapfig\grqq . Graphics within a \glqq wrapfigure\grqq{} can be wrapped either left or right of text.
 
-Die nachfolgende \autoref{img:beispielbild} demonstriert die Darstellung\index{Darstellung} eines \glqq *.jpg\grqq{} Bildes innerhalb des Textes (beim Einfügen kann auf die Endung verzichtet werden, solange der Name einzigartig ist). Zusätzlich enthält dieses einen Untertitel der über das bereits verwendete Label verlinkt werden kann. Der Untertitel\index{Untertitel} erscheint im \gls{abbvz}.
+%Die nachfolgende \autoref{img:beispielbild} demonstriert die Darstellung\index{Darstellung} eines \glqq *.jpg\grqq{} Bildes innerhalb des Textes (beim Einfügen kann auf die Endung verzichtet werden, solange der Name einzigartig ist). Zusätzlich enthält dieses einen Untertitel der über das bereits verwendete Label verlinkt werden kann. Der Untertitel\index{Untertitel} erscheint im \gls{abbvz}.
+The following \autoref{img:examplePicture} demonstrates the representation\index{Darstellung} of a \glqq *.jpg\grqq{} image within the text (when pasting, the extension can be omitted as long as the name is unique). Additionally, it contains a subtitle which can be linked to the already used label. The subtitle\index{Untertitel} appears in \gls{abbvz}.
 
-\section{Text Formatierungen und sonstiges}
-Dieser Text enthält eine Fußnote\footnote{Fußnoten sind Anmerkungen, die im Druck-Layout aus dem Fließtext ausgelagert werden, um den Text flüssig lesbar zu gestalten.}.
+
+\section{Text formatting etc}
+This text contains a footnote\footnote{Footnotes are annotations that are extracted from the continuous text in the print layout to make the text easier to read.}
 
 \subsection{Listen}
-Listen könne sowohl mit Bullet points als auch mit Zahlen erstellt werden
+Lists can be created with bullet points as well as with numbers
 \begin{itemize}
-	\item Eine Liste mit Bullet points
-	\item Ein weiteres Element
+	\item a list with bullet points
+	\item a further element
 \end{itemize}
 
 \begin{enumerate}
-	\item Eine Liste mit Zahlen
-	\item Ein weiteres Element
+	\item a list with numbers
+	\item a further element
 \end{enumerate}
 
-\subsection{Text Hervorhebungen}
+\subsection{Text Highlighting}
 \begin{quote}
 	The problem with internet quotes is that you can't always depend on their accuracy \par\raggedleft--- \textup{Abraham Lincoln, 1864}
 \end{quote}
 
-"Inspirierende Zitate können mit epigraph eingefügt werden
-%\epigraph{The problem with internet quotes is that you can't always depend on their accuracy}{Abraham Lincoln, 1864}
+% in Lualatex 1.10.0 (TeX Live 2019/Debian), there need to be empty lines around the \epigraph{}{}
+% https://tex.stackexchange.com/questions/505409/create-a-page-text-wide-text-box-in-twocolumn-document
+Inspiring quotes can be inserted with epigraph
 
-Seitenumbrüche können nur direkt nach Text geschrieben werden, sonst lässt sich das Latex nicht mehr compilieren.
-\\
+\epigraph{The problem with internet quotes is that you can't always depend on their accuracy}{Abraham Lincoln, 1864}
+
+line breaks can only be written directly after text, otherwise the latex cannot be compiled.
+\\ %これ
+
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{resources/images/example}
-	\caption{Beispielbild {\cite{PEXELS2015}}}
-	\label{img:beispielbild}
+	\caption{sample picture {\cite{PEXELS2015}}}
+	\label{img:examplePicture}
 \end{figure}
 
-\section{Tabelle}
+\section{Table}
 
-Nachfolgend \autoref{tbl:DigitalesZertifikat}.
+Nachfolgend \autoref{tbl:digitalCertificate}.
 
 \begin{table}[H]
 	\begin{center}
 		\renewcommand{\arraystretch}{1.3}
 		\begin{tabular}{|l|}
 			\hline
-			\textbf{Inhaber:}\\
+			\textbf{owner:}\\
 			Alice \\ \hline
-			\textbf{Peer (Ersteller):}\\
+			\textbf{Peer (creator):}\\
 			Bob \\ \hline
-			\textbf{Öffentlicher Schlüssel des Inhabers:}\\
+			\textbf{Public key of the owner:}\\
 			F2 D2 0E ED FA 4E 9E 0A F2 DD 23 8A 32 44 F3 E9 \\ \hline
-			\textbf{Gültigkeit:}\\
+			\textbf{validity:}\\
 			2015-07-01 – 2016-06-30 \\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{Digitales Zertifikat}
-	\label{tbl:DigitalesZertifikat}
+	\caption{digital certificate}
+	\label{tbl:digitalCertificate}
 \end{table}
 
 \section{Long-Table}
 
-Die \glqq Long-Table\grqq kann über definierte Header und Footer über Seitenumbrüche hinweg angezeigt werden.
+%Die \glqq Long-Table\grqq kann über definierte Header und Footer über Seitenumbrüche hinweg angezeigt werden.
+The \glqq Long-Table\grqq can be displayed over defined headers and footers across page breaks.
+
 
 \begin{longtable}{|l|l|l|l|}
 	\hline
@@ -97,16 +110,16 @@ Die \glqq Long-Table\grqq kann über definierte Header und Footer über Seitenum
 	\multicolumn{1}{|c|}{\textbf{Verteilung}} \\ \hline
 	\endfirsthead
 	
-	\multicolumn{4}{c}{Fortsetzung - Verteilung der Androidversionen (Stand 01.02.2016)}\\ \hline
+	\multicolumn{4}{c}{... - Distribution of the Android versions (as of 2016-02-01)}\\ \hline
 	\multicolumn{1}{|c}{\textbf{Version}} & \multicolumn{1}{|c}{\textbf{Codename}} &
 	\multicolumn{1}{|c}{\textbf{API}} &
 	\multicolumn{1}{|c|}{\textbf{Verteilung}} \\ \hline 
 	\endhead
 	
-	\multicolumn{4}{c}{Fortsetzung auf nachfolgender Seite}
+	\multicolumn{4}{c}{continued on next page}
 	\endfoot
 	
-	\caption{Verteilung der Androidversionen (Stand: 01.02.2016)}
+	\caption{Distribution of the Android versions (as of 2016-02-01)}
 	\label{tab:androidverteilung}
 	\endlastfoot
 	
@@ -122,16 +135,20 @@ Die \glqq Long-Table\grqq kann über definierte Header und Footer über Seitenum
 	6.0 & Marshmallow & 23 & 1.2\%\\ \hline
 \end{longtable}
 
-\section{Literaturverweis}
 
+\section{References}
 Weil für die alte\index{alte} und die neue Rechtschreibung verschiedene Trennregeln\index{Trennregeln} gelten, sind Deutsch mit alter Rechtschreibung und Deutsch mit neuer Rechtschreibung zwei verschiedene Sprachen (\cite{Knappen2009}, S. 192).
 
-\section{Onlineverweise}
 
+\section{References (Online)}
 Siehe Google.de \cite{Google2015}.
 
+
 \section{Glossar}
-Der Glossar enthält die Beschreibung verwendeter Begriffe für das bessere Verständnis gegenüber dem Leser. Beispiele sind: \gls{berlin}, \gls{outsourcing}, \gls{asp}, \gls{policy} und \gls{pcie}.
+% Der Glossar enthält die Beschreibung verwendeter Begriffe für das bessere Verständnis gegenüber dem Leser. Beispiele sind: \gls{berlin}, \gls{outsourcing}, \gls{asp}, \gls{policy} und \gls{pcie}.
+The glossary contains the description of terms used for a better understanding towards the reader. Examples are: \gls{berlin}, \gls{outsourcing}, \gls{asp}, \gls{policy} and \gls{pcie}.
+
 
 \section{Abkürzungsverzeichnis}
-Das Abkürzungsverzeichnis listet alle verwendeten Abkürzungen auf. Einige Beispiele sind \gls{sas}, \gls{cd}, \gls{lan} und \gls{iso}. Die erneute Verwendung zeigt nur noch die Abkürzung: \gls{sas}, \gls{cd}, \gls{lan} und\index{und} \gls{iso}.
+% Das Abkürzungsverzeichnis listet alle verwendeten Abkürzungen auf. Einige Beispiele sind \gls{sas}, \gls{cd}, \gls{lan} und \gls{iso}. Die erneute Verwendung zeigt nur noch die Abkürzung: \gls{sas}, \gls{cd}, \gls{lan} und\index{und} \gls{iso}.
+The list of abbreviations lists all abbreviations used. Some examples are \gls{sas}, \gls{cd}, \gls{lan} and \gls{iso}. The reuse only shows the abbreviation: \gls{sas}, \gls{cd}, \gls{lan} and\index{and} \gls{iso}.
