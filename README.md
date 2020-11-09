@@ -56,10 +56,7 @@ Die Vorlage wurde erfolgreich unter der [TEX Live](http://tug.org/texlive/) Umge
 * ```perl``` (für ```latexmk```)
 * ```latexmk``` (über MikTex)
 
-## Runterladen der LaTeX Dateien
-Die Vorlage kann entweder mit ```git clone https://github.com/a-czyrny/LaTeX-Master-Vorlage.git``` (siehe optionale Software) oder mit über die GitHub Seite als *.zip Datei runtergeladen werden.
-
-### MacOS (getestet mit Shuya Fuchigami)
+### MacOS (getestet von Shuya Fuchigami)
 **Benötigte Software:**
 * [TEX Live](https://tug.org/mactex/)
 * TexStudio
@@ -68,6 +65,9 @@ Die Vorlage kann entweder mit ```git clone https://github.com/a-czyrny/LaTeX-Mas
 
 * ```git``` (zum Clonen und Contributen)
 * ```homebrew``` (zur Installation)
+
+## Runterladen der LaTeX Dateien
+Die Vorlage kann entweder mit ```git clone https://github.com/a-czyrny/LaTeX-Master-Vorlage.git``` (siehe optionale Software) oder mit über die GitHub Seite als *.zip Datei runtergeladen werden.
 
 ## Bearbeiten und Compilieren der LaTeX Dateien
 ### Windows
