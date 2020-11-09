@@ -59,6 +59,15 @@ Die Vorlage wurde erfolgreich unter der [TEX Live](http://tug.org/texlive/) Umge
 ## Runterladen der LaTeX Dateien
 Die Vorlage kann entweder mit ```git clone https://github.com/a-czyrny/LaTeX-Master-Vorlage.git``` (siehe optionale Software) oder mit über die GitHub Seite als *.zip Datei runtergeladen werden.
 
+### MacOS (getestet mit Shuya Fuchigami)
+**Benötigte Software:**
+* [TEX Live](https://tug.org/mactex/)
+* TexStudio
+
+**Optionale Software:**
+
+* ```git``` (zum Clonen und Contributen)
+* ```homebrew``` (zur Installation)
 
 ## Bearbeiten und Compilieren der LaTeX Dateien
 ### Windows
