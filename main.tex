@@ -26,7 +26,7 @@
 \loadglsentries{references/glossary_acronyms.tex}
 \setacronymstyle{long-short}
 
-\makeindex[columns=2, title=keyword index, options= -s resources/styles/indexstyle.ist, intoc]
+\makeindex[columns=2, title=List of Keywords, options= -s resources/styles/indexstyle.ist, intoc]
 \indexsetup{level=\chapter*,toclevel=chapter}
 
 %start of the content
@@ -61,10 +61,10 @@
 %list of tables
 \listoftables \clearpage
 
-%source code index
+%list of source codes
 \lstlistoflistings \clearpage
 
-%keyword index
+%list of keywords
 \printindex \clearpage
 
 %Glossary
@@ -75,8 +75,8 @@
 
 %bibliographies (separated by keyword)
 \printbibliography[heading=bibintoc, keyword={book}, title={Bibliography}]\clearpage
-\printbibliography[heading=bibintoc, keyword={online}, title={Online source}]\clearpage
-\printbibliography[heading=bibintoc, keyword={image}, title={Image source}]\clearpage
+\printbibliography[heading=bibintoc, keyword={online}, title={Online References}]\clearpage
+\printbibliography[heading=bibintoc, keyword={image}, title={Image References}]\clearpage
 
 % appendix
 \input{chapter/Anhang}
