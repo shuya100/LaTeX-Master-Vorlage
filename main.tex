@@ -40,22 +40,22 @@
 
 \pagenumbering{Roman}
 
-\include{chapter/Vorwort} \clearpage
-\include{chapter/Abstract} \clearpage
+\include{chapter/preamble.tex} \clearpage
+\include{chapter/abstract.tex} \clearpage
 
 %table of contents
 \tableofcontents \newpage
 
 %main part
 \pagenumbering{arabic}
-\input{chapter/einleitung.tex} \clearpage
+\input{chapter/introduction.tex} \clearpage
 \input{chapter/background.tex} \clearpage
 \input{chapter/analysis.tex} \clearpage
 \input{chapter/technical_design.tex} \clearpage
 \input{chapter/implementation.tex} \clearpage
 \input{chapter/evaluation.tex} \clearpage
 \input{chapter/summary_ perspectives.tex}
-\input{chapter/beispiele.tex} \clearpage
+\input{chapter/example.tex} \clearpage
 
 %appendix
 %TODO:なにこれ？
@@ -85,9 +85,9 @@
 \printbibliography[heading=bibintoc, keyword={image}, title={Image References}]\clearpage
 
 % appendix
-\input{chapter/Anhang}
+\input{chapter/appendix.tex}
 
 % declaration
-\input{chapter/Eigenstaendigkeitserklaerung}
+\input{chapter/declaration.tex}
 
 \end{document}
