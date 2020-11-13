@@ -8,12 +8,21 @@
 
 \renewcommand*{\maketitle}{
 	\begin{titlepage}
+
+		% TODO: 下に下りすぎる
+		% with logo
+		% \begin{center}
+		% 	\includegraphics[width=0.28\textwidth,keepaspectratio]{resources/images/HTW_Logo_rgb.jpg}
+		% \end{center}
+
+		% without logo
 		\newgeometry{left=2.5cm,right=2.5cm,top=9.0cm,bottom=2.5cm}
+
 		\begin{center}
 			\vfill
 			{\Large \@title\par}
 			\vskip 0.5cm
-			{\large \bfseries Bacherlor's/Master's Thesis\par}
+			{\large \bfseries Bachelor's/Master's Thesis\par}
 			\vskip 0.5cm
 						% {\large for the purpose of obtaining the academic degree \\ 
 						{\large in partial fulfillment of the requirements \\ 
@@ -23,7 +32,6 @@
 			{\large in}
 			\vskip 0.5cm
 			
-			%TODO: for が２回も使われているのが鬱陶しい。
 			{\large Hochschule für Technik und Wirtschaft Berlin
 	\\ (HTW Berlin - University of Applied Sciences)
 	\\ Fachbereich 4 Informatik, Kommunikation und Wirtschaft\\ Internationaler Studiengang Medieninformatik}
