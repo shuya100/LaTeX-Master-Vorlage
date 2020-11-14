@@ -1,69 +1,69 @@
-%Dokumentenklasse "scrbook" - Erweitert um den Verweis auf die Verzeichnisse und Texteigenschaften
+%　Document class "scrbook" - Extended by the reference to the directories and text properties
 \documentclass[chapterprefix=true, 12pt, a4paper, oneside, parskip=half, listof=totoc, bibliography=totoc, numbers=noendperiod]{scrbook}
 
 
-%Anpassung der Seitenränder (Standard bottom ca. 52mm anbzüglich von ca. 4mm für die nach oben rechts gewanderte Seitenzahl)
+% Adjustment of the page margins (standard bottom approx. 52mm with respect to approx. 4mm for the page number moved to the top right)
 \usepackage[bottom=48mm,left=25mm,right=25mm]{geometry}
 
-%Tweaks für scrbook
+%　Tweaks for scrbook
 \usepackage{scrhack}
 
-%Blindtext
+%Filler Text
 \usepackage{blindtext}
 
-%Erlaubt unteranderem Umbrücke captions
+% Permitted under other bridge captions
 \usepackage{caption}
 
-%Stichwortverzeichnis
+% List of Keywords
 \usepackage{imakeidx}
 
-%Kompakte Listen
+% Compact lists
 \usepackage{paralist}
 
-%Zitate besser formatieren und darstellen
+% Better format and display quotes
 \usepackage{epigraph}
 
-%Glossar, Stichworverzeichnis (Akronyme werden als eigene Liste aufgeführt)
+% Glossary, keyword index (acronyms are listed separately)
 \usepackage[toc, acronym]{glossaries} 
 
-%Anpassung von Kopf- und Fußzeile
-%beinflusst die erste Seite des Kapitels
+% Customization of header and footer
+% influences the first page of the chapter
 \usepackage[automark,headsepline]{scrlayer-scrpage}
 \input{resources/styles/header_footer}
 
-%Auskommentieren für die Verkleinerung des vertikalen Abstandes eines neuen Kapitels
+% Comment out for the reduction of the vertical distance of a new chapter
 %\renewcommand*{\chapterheadstartvskip}{\vspace*{.25\baselineskip}}
 
-%Zeilenabstand 1,5
+% line spacing 1.5
 \usepackage[onehalfspacing]{setspace}
 
-%Verbesserte Darstellung der Buchstaben zueinander
+% Improved representation of the letters to each other
 \usepackage[stretch=10]{microtype}
 
-%Deutsche Bezeichnungen für angezeigte Namen (z.B. Innhaltsverzeichnis etc.)
+% use English (e.g. table of contents etc.)
 \usepackage[english]{babel}
 
-%Unterstützung von Umlauten und anderen Sonderzeichen (UTF-8)
+% Support of umlauts and other special characters (UTF-8)
 \usepackage{lmodern}
 \usepackage[utf8]{luainputenc}
 \usepackage[T1]{fontenc}
 
-%Einfachere Zitate
+% Simpler quotes
 \usepackage{epigraph}
 
-%Unterstützung der H positionierung (keine automatische Verschiebung eingefügter Elemente)
+% Support of H positioning (no automatic movement of inserted elements)
 \usepackage{float} 
 
-%Erlaubt Umbrüche innerhalb von Tabellen
+% Allows wrapping within tables
 \usepackage{tabularx}
 
-%Erlaubt Seitenumbrüche innerhalb von Tabellen
+% Allows page breaks within tables
 \usepackage{longtable}
 
-%Erlaubt die Darstellung von Sourcecode mit Highlighting
+% Allows to display source code with highlighting
 \usepackage{listings}
 
-%Definierung eigener Farben bei nutzung eines selbst vergebene Namens
+% Definition of own colors when using a self-assigned name
 \usepackage[table,xcdraw]{xcolor}
 
 %Vektorgrafiken
