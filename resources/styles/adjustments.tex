@@ -1,17 +1,17 @@
-%Anpassung der Überschriften
+% Adjusting the headings
 \addtokomafont{disposition}{\rmfamily}
 
-%Zusätzliche Farben
+% Additional colors
 \definecolor{darkgreen}{RGB}{0,100,0}
 
-%Umbenennungen
+%Renaming
 \renewcommand{\lstlistlistingname}{List of Source Codes}
 
-%Pluszeichen in der Referenc beim zitieren ausblenden
+% Hide plus sign in reference when quoting
 \renewcommand*{\labelalphaothers}{}
 
-%Anpassugen zur Quelltextdarstellung, kann bei Bedarf überschrieben werden (z.B. wenn unterschiedliche Sprachen zum Einsatz kommen)
-\renewcommand{\lstlistingname}{Codeauszug}
+%Adjustments to the source code representation, can be overwritten if necessary (e.g. if different languages are used)
+\renewcommand{\lstlistingname}{Source Code}
 \lstset{
 	language=Java,
 	numbers=left,
@@ -38,7 +38,7 @@
 	prebreak={\mbox{$\hookleftarrow$}}
 }
 
-%Anpassungen für das Abkürzungsverzeichnis
+% Adjustments for the list of abbreviations
 \newglossarystyle{dottedlocations}{%
 	\renewcommand*{\glossaryentryfield}[5]{%
 		\item[\glsentryitem{##1}\glstarget{##1}{##2}] \emph{##3}%
