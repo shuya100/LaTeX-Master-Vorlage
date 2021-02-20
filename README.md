@@ -1,93 +1,97 @@
 # LaTeX-Master-Vorlage
 
-Die Latex-Master-Vorlage kann für Forschungsprojekte, Bachelor- und Masterarbeiten optimal genutzt werden. Notwendigen Pakete sind bereits eingebunden und Einstellungen vorgenommen. 
+This is a forked English version of a-czyrny's [LaTeX-Master-Vorlage](https://github.com/a-czyrny/LaTeX-Master-Vorlage).
 
-Diese LaTeX Vorlage wurde bereits für Masterarbeiten an der Hochschule für Technik und Wirtschaft Berlin (HTW Berlin), Fachbereich 4 genutzt.
+---
+The Latex Master template can be used optimally for research projects, bachelor and master theses. Necessary packages are already included and settings are made. 
 
-Wenn diese Vorlage für deine Arbeit (oder Forschungsprojekt) genutzt wurde, schreibe bitte den Professor/Prüfer unten an die Liste. 
+This [original LaTeX template](https://github.com/a-czyrny/LaTeX-Master-Vorlage) has already been used for master theses at the University of Applied Sciences Berlin (HTW Berlin), department 4.
 
-# Beispiel-PDF
+If this template has been used for your thesis (or research project), please write the professor/examiner below to the list. 
 
-[PDF Ansehen](main.pdf)
 
-# Benutzung
+# Example
 
-Um diese Vorlage nutzen zu können muss die benötigte Software installiert werden. Sobald dies der Fall ist, kann die Vorlage runtergeladen und angepasst werden.
+[see PDF](main.pdf)
 
-## Empfohlene Umgebung
-Die Vorlage wurde erfolgreich unter der [TEX Live](http://tug.org/texlive/) Umgebung mit folgenden Programmen kompiliert.
+# Use
+
+In order to use this template, the required software must be installed. Once this is the case, the template can be downloaded and customized.
+
+## Recommended environment
+The template has been successfully compiled under the [TEX Live](http://tug.org/texlive/) environment using the following programs.
 
 - **Compiler**: lualatex
-- **Bibliographie**: biber
-- **Index**: makeindex (Ergänzungen unter Anmerkungen beachten)
-- **Glossar**: makeglossaries
+- **Bibliography**: biber
+- **Index**: makeindex (note additions under comments)
+- **glossary**: makeglossaries
 
-## Installieren der benötigten Software
+## Installing the required software
 ### Windows
-**Benötigte Software:**
+**Required software:**
 
 * MikTex
 * TexStudio
 
-**Optionale Software:**
+**Optional software:**
 
-* ```git``` (zum Clonen und Contributen)
-* ```perl``` (für ```latexmk```)
-* ```latexmk``` (über MikTex)
+* ``git`` (for cloning and contributing)
+* ``perl`` (for ``latexmk``)
+* ``latexmk`` (via MikTex)
 
-### Linux (getestet mit Debian Jessie)
-**Benötigte Software:**
+### Linux (tested with Debian Jessie)
+**Required software:**
 
-* wget (```apt-get -y install wget```)
-* texlive (```apt-get -y install texlive```)
-* texlive Pakete:
+* wget (``apt-get -y install wget``)
+* texlive (``apt-get -y install texlive``)
+* texlive packages:
         wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz &&\
         tar -xzvf install-tl-unx.tar.gz &&\
         rm install-tl-unx.tar.gz
         echo I | install-tl*/install-tl
-* Pakete zu Path hinzufügen
+* Add packages to path
         PATH=/usr/local/texlive/2015/bin/x86_64-linux:$PATH    
-* Noch mehr settings:
+* More settings:
         tlmgr conf texmf TEXMFHOME "/usr/local/texlive/2015/bin/x86_64-linux"
 
-**Optionale Software:**
+**Optional software:**
 
-* ```git``` (zum Clonen und Contributen)
-* ```perl``` (für ```latexmk```)
-* ```latexmk``` (über MikTex)
+* ``git`` (for cloning and contributing)
+* ``perl`` (for ``latexmk``)
+* ``latexmk`` (via MikTex)
 
-### MacOS (getestet von Shuya Fuchigami)
-**Benötigte Software:**
+### MacOS (tested by Shuya Fuchigami)
+**Required software:**
 * [TEX Live](https://tug.org/mactex/)
 * TexStudio
 
-**Optionale Software:**
+**Optional Software:**
 
-* ```git``` (zum Clonen und Contributen)
-* ```homebrew``` (zur Installation)
+* ``git`` (for cloning and contributing)
+* ``homebrew`` (for installation)
 
-## Runterladen der LaTeX Dateien
-Die Vorlage kann entweder mit ```git clone https://github.com/a-czyrny/LaTeX-Master-Vorlage.git``` (siehe optionale Software) oder mit über die GitHub Seite als *.zip Datei runtergeladen werden.
+## Downloading the LaTeX files
+The template can be downloaded either with ```git clone https://github.com/a-czyrny/LaTeX-Master-Vorlage.git`` (see optional software) or with via the GitHub page as *.zip file.
 
-## Bearbeiten und Compilieren der LaTeX Dateien
+## Editing and compiling the LaTeX files
 ### Windows
-Unter **Windows** ist [TexStudio](http://www.texstudio.org/) als Editor empfohlen.
+On **Windows**, [TexStudio](http://www.texstudio.org/) is the recommended editor.
 
-Wenn die Standardeinstellungen von TexStudio genutzt werden, müssen noch zwei manuelle Schritte durchgeführt werden:
-1. Die Referenzen für das Glossar und das Abkürzungsverzeichnis müssen erstellt werden. In der Kommandozeile in dem Ordner der Vorlage:
+If the default settings of TexStudio are used, two manual steps still have to be done:
+1. the references for the glossary and the list of abbreviations have to be created. In the command line in the folder of the template:
 
     makeindex -s main.ist -t main.alg -o main.acr main.acn
     makeindex -s main.ist -t main.glg -o main.gls main.glo 
 
-2. Das LaTeX Dokument muss zwei mal compiliert werden (```F5```) damit alle Referenzen aufgelöst werden.
+2. the LaTeX document must be compiled twice (``F5``) to resolve all references.
 
 **Alternative** 
 
-Wenn ```latexmk``` installiert wurde (siehe optionale Software) kann im TexStudio unter "Optionen / TexStudio konfigurieren / Erzeugen" auch ```latexmk```als Standardkompiler angegeben werden.
-```latexmk```funktioniert dann auch von der Kommandozeile aus
+If ``latexmk`` has been installed (see optional software), ``latexmk`` can also be specified as default compiler in TexStudio under "Options / Configure TexStudio / Generate".
+``latexmk`` will then also work from the command line
  
 ### Linux
-Unter **Linux** kann die Vorlage mit dem Texteditor der Wahl editiert werden. Zum compilieren kann ```lualatex``` genutzt werden:
+Under **Linux** the template can be edited with the text editor of choice. For compiling you can use ``lualatex``:
 
     lualatex -synctex=1 -interaction=nonstopmode main
     biber main
@@ -98,24 +102,25 @@ Unter **Linux** kann die Vorlage mit dem Texteditor der Wahl editiert werden. Zu
     lualatex -synctex=1 -interaction=nonstopmode main
     
 **Alternative**
-Wenn ```latexmk``` installiert wurde (siehe optionale Software) kann in dem Verzeichnis auch ```latexmk```angegeben werden. Dies führt die oben genannten Schritte aus.
+If ``latexmk`` has been installed (see optional software), ``latexmk`` can also be specified in the directory. This will perform the above steps.
     
 
-# Contributing 
-Die Funktionskommentare innerhalb der *.tex Dateien sind größtenteils auf Deutsch. 
-Ergänzungen Anderer können jedoch in englischer Sprache ausfallen. Diese werden, wenn notwendig, zeitnah übersetzt.
   
-# Anmerkungen
-## Stichwortverzeichnis
-Zum Erzeugen des Glossar und Abkürzungsverzeichnis muss "makeinxed" wie folgt aufgerufen werden:
+# Notes
+## Index
+To generate the glossary and abbreviation index, "makeinxed" must be called as follows:
 
 *makeindex -s main.ist -t main.glg -o main.gls main.glo*
 
 *makeindex -s main.ist -t main.alg -o main.acr main.acn*
 
-Der Titel im Header der Seite muss zusätzlich in der Style-Datei "[indexstyle.ist](indexstyle.ist)" angepasst werden:
+The title in the header of the page must also be adjusted in the style file "[indexstyle.ist](indexstyle.ist)":
 
-siehe: preamble "\\\markboth{**STICHWORTVERZEICHNIS**}{}\n\n\\begin{theindex}\n"
+see: preamble "\\\markboth{**STICHWORTVERZEICHNIS**}{}\n\n\\begin{theindex}\n"
 
-# Welcher Professororen/ Prüfer haben Arbeiten mit dieser Vorlage bereits zugestimmt?
-* Prof. Dr. Fortenbacher, Masterarbeit
+# Which professors/examiners have already approved papers with this template?
+* Prof. Dr. Fortenbacher, master thesis
+
+
+## Lizenz
+[Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0?ref=chooser-v1)
